@@ -10,7 +10,7 @@ description: >
   propose-then-confirm workflow (skills live in .claude/skills/).
 compatibility: Repos using .claude/skills/<name>/SKILL.md (Claude Code / Agent SDK skills).
 metadata:
-  version: "1.0"
+  version: "1.1"
 ---
 
 # Skill maintenance — keep the skill library current
@@ -101,3 +101,5 @@ skills in `.claude/skills/` for the house style before writing a new one).
 - Don't duplicate a whole rule into both `AGENTS.md` and a skill — put the
   one-line rule in `AGENTS.md` and the detail in the skill.
 - Don't let a skill go stale — if you find it wrong while working, propose the fix.
+- Don't propose more than one skill per chat, or propose after a trivial change
+  (see `.claude/rules/skill-self-improvement/RULE.md` for the anti-spam constraints).

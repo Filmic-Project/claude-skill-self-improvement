@@ -20,6 +20,10 @@ Two behaviors, one hard gate:
 2. **Propose an IMPROVEMENT** when a loaded skill is inaccurate, incomplete, or stale.
 3. **NEVER create or modify a `SKILL.md` (or `RULE.md`) without explicit user approval** — treat it like any other repo change.
 
+## When to run this check
+
+This rule is always on, but evaluate it at a **definite moment: just before you end a turn.** Do a single, quick pass over the triggers below — did anything this turn reveal a reusable gap or a wrong/stale skill? If yes, propose (propose-then-confirm) before finishing. If no, end the turn normally. Run this pass **at most once per turn** — never re-open it after you've already reflected, and never manufacture a gap to justify a proposal.
+
 ## When to propose a NEW skill
 
 - A PR review comment (human or automated) flags a convention or "you should have used X" that will recur.
@@ -59,6 +63,7 @@ Approval must be specific to the skill action.
 - Improvement proposals default to a **PATCH** (a targeted diff), not a rewrite.
 - Improvement proposals **must cite evidence** — no "the skill could be better" without a concrete failure.
 - A `pinned: true` frontmatter marker means: propose **patches only, never archival**.
+- **Never auto-touch a human-authored or bundled skill** — only ever frame a change as a proposal.
 - Descriptions follow the `name` + 2nd-person, trigger-rich `description` YAML convention.
 - If a one-line rule also belongs in the always-loaded `AGENTS.md`/`CLAUDE.md`, add it there and point to the skill for the detail.
 
